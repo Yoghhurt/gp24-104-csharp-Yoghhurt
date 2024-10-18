@@ -6,24 +6,34 @@ class Program
    static void Main()
    {
       Player first  = new Player();
-      first.GrantExperience(100);
+      first.GrantExperience();
    }
    
 
    public class Player
    {
-      public int level;
-      public int experience;
+      public int level = 0;
+      public int experience = 0;
 
       public void GrantExperience()
       {
-         experience++;
-         if (experience >= 100)
-         {
-            level++;
-            experience = 0;
-         }
+         experience++; 
+        string input = Console.ReadLine();
+         int points = int.Parse(input);
+         experience += points;
 
+                 while (experience >= 100)
+                 {
+                    level++;
+                    experience -= 100;
+                 }
+
+                 
+                if (experience == 100)
+                 {
+                    level++;
+                 }
+         
          Console.WriteLine($"Level: {level}, Experience: {experience}");
 
       }

@@ -26,9 +26,29 @@ public class Program
       {
          person.Greeting();
       }
+     
+      House blueHouse = new House();
+      House redHouse = new House();
+      
+      Console.WriteLine($"Blue House door open: {blueHouse.IsDoorOpen()}"); // false
+      Console.WriteLine($"Red House door open: {redHouse.IsDoorOpen()}");   // false
+      
+      blueHouse.OpenDoor();
+      
+      Console.WriteLine($"Blue House door open: {blueHouse.IsDoorOpen()}"); 
+      Console.WriteLine($"Red House door open: {redHouse.IsDoorOpen()}");   
+      
+      redHouse.OpenDoor();
+      
+      Console.WriteLine($"Blue House door open: {blueHouse.IsDoorOpen()}"); 
+      Console.WriteLine($"Red House door open: {redHouse.IsDoorOpen()}");   
+      
       Player first  = new Player();
-      first.GrantExperience();
+            first.GrantExperience();
    }
+    
+      
+   
    
 
    public class Player

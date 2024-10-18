@@ -13,6 +13,19 @@ public class Program
    {
       World world = new World();
       world.hello();
+      Person[] people = new Person[3];
+      
+      for (int i = 0; i < people.Length; i++)
+      {
+         Console.Write($"Enter the name for person {i + 1}: ");
+         string name = Console.ReadLine();
+         people[i] = new Person(name);
+      }
+      
+      foreach (var person in people)
+      {
+         person.Greeting();
+      }
       Player first  = new Player();
       first.GrantExperience();
    }

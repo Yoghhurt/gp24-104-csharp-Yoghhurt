@@ -71,7 +71,22 @@ class Program
         
 
         Luke luke = new Luke();
-        luke.ShowTitle(); 
-        
+        luke.ShowTitle();
+
+
+        {
+            Plant plant = new Plant();
+            Grain grain = new Grain();
+            Wheat wheat = new Wheat();
+            
+            plant.CanGrow();
+            
+            grain.CanGrow(); 
+            grain.CanBeHarvested();
+            
+            wheat.CanGrow(); 
+            wheat.CanBeHarvested();
+            wheat.CanBeProcessedToBread();
+        }
     }
 }
